@@ -15,7 +15,10 @@ function initializeNavigation() {
 
   function setMenuOpen(isOpen) {
     toggle.setAttribute("aria-expanded", String(isOpen));
-    toggle.setAttribute("aria-label", isOpen ? "إغلاق القائمة" : "فتح القائمة");
+    toggle.setAttribute(
+      "aria-label",
+      isOpen ? "إغلاق القائمة" : "فتح القائمة"
+    );
     navigation.classList.toggle("is-open", isOpen);
   }
 
@@ -28,31 +31,52 @@ function initializeNavigation() {
     if (!link) return;
 
     // Move focus off a link before hiding its mobile navigation container.
-    if (mobileViewport.matches) toggle.focus({ preventScroll: true });
+    if (mobileViewport.matches) {
+      toggle.focus({ preventScroll: true });
+    }
+
     setMenuOpen(false);
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key !== "Escape" || toggle.getAttribute("aria-expanded") !== "true") return;
+    if (
+      event.key !== "Escape" ||
+      toggle.getAttribute("aria-expanded") !== "true"
+    ) {
+      return;
+    }
+
     setMenuOpen(false);
     toggle.focus();
   });
 
   document.addEventListener("click", (event) => {
-    if (navigation.contains(event.target) || toggle.contains(event.target)) return;
+    if (
+      navigation.contains(event.target) ||
+      toggle.contains(event.target)
+    ) {
+      return;
+    }
+
     setMenuOpen(false);
   });
 
-  mobileViewport.addEventListener("change", () => setMenuOpen(false));
+  mobileViewport.addEventListener("change", () => {
+    setMenuOpen(false);
+  });
 }
 
 function getRegistrationUrl() {
   const value = SITE_CONFIG.registrationUrl.trim();
+
   if (!value) return null;
 
   try {
-    const url = new URL(value);
-    return ["https:", "http:"].includes(url.protocol) ? url.href : null;
+    const url = new URL(value, window.location.href);
+
+    return ["https:", "http:"].includes(url.protocol)
+      ? url.href
+      : null;
   } catch {
     return null;
   }
@@ -70,12 +94,15 @@ function initializeRegistration() {
     }
 
     link.setAttribute("aria-haspopup", "dialog");
+
     link.addEventListener("click", (event) => {
       event.preventDefault();
 
       // Let the navigation finish closing before the modal receives focus.
       requestAnimationFrame(() => {
-        if (dialog && !dialog.open) dialog.showModal();
+        if (dialog && !dialog.open) {
+          dialog.showModal();
+        }
       });
     });
   });
@@ -84,20 +111,32 @@ function initializeRegistration() {
 
   dialog.addEventListener("click", (event) => {
     if (event.target !== dialog) return;
+
     const bounds = dialog.getBoundingClientRect();
-    const outsideDialog = event.clientX < bounds.left || event.clientX > bounds.right
-      || event.clientY < bounds.top || event.clientY > bounds.bottom;
-    if (outsideDialog) dialog.close();
+
+    const outsideDialog =
+      event.clientX < bounds.left ||
+      event.clientX > bounds.right ||
+      event.clientY < bounds.top ||
+      event.clientY > bounds.bottom;
+
+    if (outsideDialog) {
+      dialog.close();
+    }
   });
 }
 
 function updateCopyrightYear() {
   const yearElement = document.querySelector("[data-current-year]");
-  if (yearElement) yearElement.textContent = String(new Date().getFullYear());
+
+  if (yearElement) {
+    yearElement.textContent = String(new Date().getFullYear());
+  }
 }
 
 function initializeSite() {
   document.documentElement.classList.add("has-js");
+
   initializeNavigation();
   initializeRegistration();
   updateCopyrightYear();
