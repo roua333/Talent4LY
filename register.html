@@ -4,190 +4,636 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#031B33">
-    <meta name="description" content="نموذج الانضمام إلى مجتمع Talent4LY للكفاءات الليبية المتخصصة في الذكاء الاصطناعي.">
-    <title>التسجيل | Talent4LY</title>
+
+    <meta
+      name="description"
+      content="نموذج الانضمام إلى مجتمع FL4AI للكفاءات الليبية المتخصصة في الذكاء الاصطناعي."
+    >
+
+    <title>التسجيل | FL4AI</title>
+
     <link rel="stylesheet" href="./style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+      defer
+    ></script>
+
     <script src="./supabase-config.js" defer></script>
     <script src="./registration.js" defer></script>
   </head>
+
   <body class="registration-page">
-    <a class="skip-link" href="#registration-main">انتقل إلى نموذج التسجيل</a>
+
+    <a class="skip-link" href="#registration-main">
+      انتقل إلى نموذج التسجيل
+    </a>
+
 
     <header class="registration-header">
+
       <div class="container registration-header-inner">
-        <a class="registration-brand" href="./index.html" aria-label="Talent4LY، الصفحة الرئيسية">
-          <img src="./assets/bot-logo.png" alt="" width="46" height="46">
-          <span class="registration-brand-name">Talent<span>4</span>LY</span>
+
+        <a
+          class="registration-brand"
+          href="./index.html"
+          aria-label="FL4AI، الصفحة الرئيسية"
+        >
+
+          <img
+            src="./assets/fl4ai-logo.jpg"
+            alt="FL4AI"
+            width="46"
+            height="46"
+          >
+
+          <span class="registration-brand-name">
+            FL4AI
+          </span>
+
         </a>
 
-        <a class="registration-back" href="./index.html">
+
+        <a
+          class="registration-back"
+          href="./index.html"
+        >
           <span>العودة إلى الموقع</span>
           <span aria-hidden="true">←</span>
         </a>
+
       </div>
+
     </header>
 
-    <main class="registration-main" id="registration-main">
+
+
+    <main
+      class="registration-main"
+      id="registration-main"
+    >
+
       <div class="container registration-shell">
-        <aside class="registration-intro" aria-labelledby="registration-intro-title">
-          <p class="eyebrow" dir="ltr">Talent4LY Registration</p>
-          <h1 id="registration-intro-title">انضم إلى مجتمع الكفاءات الليبية في الذكاء الاصطناعي</h1>
-          <p>
-            سجّل معلوماتك المهنية الأساسية لمساعدتنا على التعرف على خبراتك ومجالات تخصصك،
-            وتسهيل ربط الكفاءات المحلية بالفرص والجهات المهتمة.
+
+
+        <aside
+          class="registration-intro"
+          aria-labelledby="registration-intro-title"
+        >
+
+          <p
+            class="eyebrow"
+            dir="ltr"
+          >
+            FL4AI Registration
           </p>
 
+
+          <h1 id="registration-intro-title">
+            انضم إلى مجتمع الكفاءات الليبية في الذكاء الاصطناعي
+          </h1>
+
+
+          <p>
+            سجّل معلوماتك المهنية الأساسية لمساعدتنا على التعرف على
+            خبراتك ومجالات تخصصك، وتسهيل ربط الكفاءات المحلية بالفرص
+            والجهات المهتمة.
+          </p>
+
+
           <ul class="registration-note-list">
-            <li>بياناتك تُرسل إلى قاعدة بيانات Talent4LY الخاصة.</li>
-            <li>الحقول المطلوبة موضحة بعلامة النجمة.</li>
-            <li>يمكنك اختيار أكثر من مجال من مجالات الذكاء الاصطناعي.</li>
+
+            <li>
+              بياناتك تُرسل إلى قاعدة بيانات FL4AI الخاصة.
+            </li>
+
+            <li>
+              الحقول المطلوبة موضحة بعلامة النجمة.
+            </li>
+
+            <li>
+              يمكنك اختيار أكثر من مجال من مجالات الذكاء الاصطناعي.
+            </li>
+
           </ul>
+
         </aside>
 
-        <section class="registration-card" aria-labelledby="registration-form-title">
+
+
+        <section
+          class="registration-card"
+          aria-labelledby="registration-form-title"
+        >
+
           <div class="registration-card-header">
-            <h2 id="registration-form-title">نموذج التسجيل</h2>
-            <p>يرجى إدخال بيانات صحيحة وحديثة. جميع الحقول المشار إليها بـ * مطلوبة.</p>
+
+            <h2 id="registration-form-title">
+              نموذج التسجيل
+            </h2>
+
+            <p>
+              يرجى إدخال بيانات صحيحة وحديثة.
+              جميع الحقول المشار إليها بـ * مطلوبة.
+            </p>
+
           </div>
 
-          <form class="registration-form" id="talent-registration-form" novalidate>
-            <div class="honeypot-field" aria-hidden="true">
-              <label for="company_website">Company website</label>
-              <input id="company_website" name="company_website" type="text" tabindex="-1" autocomplete="off">
+
+
+          <form
+            class="registration-form"
+            id="talent-registration-form"
+            novalidate
+          >
+
+
+            <div
+              class="honeypot-field"
+              aria-hidden="true"
+            >
+
+              <label for="company_website">
+                Company website
+              </label>
+
+              <input
+                id="company_website"
+                name="company_website"
+                type="text"
+                tabindex="-1"
+                autocomplete="off"
+              >
+
             </div>
 
-            <div class="form-field">
-              <label class="form-label" for="full_name">
-                الاسم الثلاثي <small dir="ltr">| Full Name</small>
-                <span class="required-mark" aria-hidden="true">*</span>
-              </label>
-              <input class="form-control" id="full_name" name="full_name" type="text"
-                autocomplete="name" maxlength="120" required
-                placeholder="مثال: أحمد علي محمد">
-              <p class="form-error" id="full_name-error" role="alert"></p>
-            </div>
+
 
             <div class="form-field">
-              <label class="form-label" for="phone">
-                رقم الهاتف / واتساب <small dir="ltr">| Phone Number / WhatsApp</small>
-                <span class="required-mark" aria-hidden="true">*</span>
+
+              <label
+                class="form-label"
+                for="full_name"
+              >
+                الاسم الثلاثي
+                <small dir="ltr">| Full Name</small>
+
+                <span
+                  class="required-mark"
+                  aria-hidden="true"
+                >
+                  *
+                </span>
               </label>
-              <input class="form-control" id="phone" name="phone" type="tel"
-                autocomplete="tel" inputmode="tel" maxlength="25" required
-                placeholder="مثال: 0912345678 أو +218912345678">
-              <p class="form-help">يمكن كتابة الرقم بصيغة محلية أو دولية.</p>
-              <p class="form-error" id="phone-error" role="alert"></p>
+
+
+              <input
+                class="form-control"
+                id="full_name"
+                name="full_name"
+                type="text"
+                autocomplete="name"
+                maxlength="120"
+                required
+                placeholder="مثال: أحمد علي محمد"
+              >
+
+
+              <p
+                class="form-error"
+                id="full_name-error"
+                role="alert"
+              ></p>
+
             </div>
 
+
+
             <div class="form-field">
-              <label class="form-label" for="email">
-                البريد الإلكتروني <small dir="ltr">| Email Address</small>
-                <span class="required-mark" aria-hidden="true">*</span>
+
+              <label
+                class="form-label"
+                for="phone"
+              >
+                رقم الهاتف / واتساب
+                <small dir="ltr">| Phone Number / WhatsApp</small>
+
+                <span
+                  class="required-mark"
+                  aria-hidden="true"
+                >
+                  *
+                </span>
               </label>
-              <input class="form-control" id="email" name="email" type="email"
-                autocomplete="email" maxlength="254" required
-                placeholder="name@example.com" dir="ltr">
-              <p class="form-error" id="email-error" role="alert"></p>
+
+
+              <input
+                class="form-control"
+                id="phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                inputmode="tel"
+                maxlength="25"
+                required
+                placeholder="مثال: 0912345678 أو +218912345678"
+              >
+
+
+              <p class="form-help">
+                يمكن كتابة الرقم بصيغة محلية أو دولية.
+              </p>
+
+
+              <p
+                class="form-error"
+                id="phone-error"
+                role="alert"
+              ></p>
+
             </div>
+
+
+
+            <div class="form-field">
+
+              <label
+                class="form-label"
+                for="email"
+              >
+                البريد الإلكتروني
+                <small dir="ltr">| Email Address</small>
+
+                <span
+                  class="required-mark"
+                  aria-hidden="true"
+                >
+                  *
+                </span>
+              </label>
+
+
+              <input
+                class="form-control"
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                maxlength="254"
+                required
+                placeholder="name@example.com"
+                dir="ltr"
+              >
+
+
+              <p
+                class="form-error"
+                id="email-error"
+                role="alert"
+              ></p>
+
+            </div>
+
+
 
             <fieldset class="checkbox-fieldset">
+
               <legend class="form-legend">
+
                 المجالات والمهارات الأساسية
-                <small dir="ltr">| Core AI Skills & Domains</small>
-                <span class="required-mark" aria-hidden="true">*</span>
+
+                <small dir="ltr">
+                  | Core AI Skills & Domains
+                </small>
+
+                <span
+                  class="required-mark"
+                  aria-hidden="true"
+                >
+                  *
+                </span>
+
               </legend>
 
-              <div class="checkbox-grid" id="skills-group">
-                <label class="checkbox-option">
-                  <input type="checkbox" name="core_skills" value="Computer Vision">
-                  <span dir="ltr">Computer Vision</span>
-                </label>
+
+
+              <div
+                class="checkbox-grid"
+                id="skills-group"
+              >
+
 
                 <label class="checkbox-option">
-                  <input type="checkbox" name="core_skills" value="LLMs & GenAI">
-                  <span dir="ltr">LLMs & GenAI</span>
+
+                  <input
+                    type="checkbox"
+                    name="core_skills"
+                    value="Computer Vision"
+                  >
+
+                  <span dir="ltr">
+                    Computer Vision
+                  </span>
+
                 </label>
 
-                <label class="checkbox-option">
-                  <input type="checkbox" name="core_skills" value="AI Agents & Automation">
-                  <span dir="ltr">AI Agents & Automation</span>
-                </label>
+
 
                 <label class="checkbox-option">
-                  <input type="checkbox" name="core_skills" value="Machine Learning / Deep Learning">
-                  <span dir="ltr">Machine Learning / Deep Learning</span>
+
+                  <input
+                    type="checkbox"
+                    name="core_skills"
+                    value="LLMs & GenAI"
+                  >
+
+                  <span dir="ltr">
+                    LLMs & GenAI
+                  </span>
+
                 </label>
 
+
+
                 <label class="checkbox-option">
-                  <input id="other_skill_checkbox" type="checkbox" name="core_skills" value="Other">
-                  <span>أخرى <bdi dir="ltr">/ Other</bdi></span>
+
+                  <input
+                    type="checkbox"
+                    name="core_skills"
+                    value="AI Agents & Automation"
+                  >
+
+                  <span dir="ltr">
+                    AI Agents & Automation
+                  </span>
+
                 </label>
+
+
+
+                <label class="checkbox-option">
+
+                  <input
+                    type="checkbox"
+                    name="core_skills"
+                    value="Machine Learning / Deep Learning"
+                  >
+
+                  <span dir="ltr">
+                    Machine Learning / Deep Learning
+                  </span>
+
+                </label>
+
+
+
+                <label class="checkbox-option">
+
+                  <input
+                    id="other_skill_checkbox"
+                    type="checkbox"
+                    name="core_skills"
+                    value="Other"
+                  >
+
+                  <span>
+                    أخرى
+                    <bdi dir="ltr">/ Other</bdi>
+                  </span>
+
+                </label>
+
               </div>
 
-              <p class="form-error" id="core_skills-error" role="alert"></p>
+
+              <p
+                class="form-error"
+                id="core_skills-error"
+                role="alert"
+              ></p>
+
             </fieldset>
 
-            <div class="form-field other-skill-field" id="other-skill-field" hidden>
-              <label class="form-label" for="other_skill">
-                اكتب المجال الآخر <small dir="ltr">| Specify Other Skill</small>
-                <span class="required-mark" aria-hidden="true">*</span>
+
+
+            <div
+              class="form-field other-skill-field"
+              id="other-skill-field"
+              hidden
+            >
+
+              <label
+                class="form-label"
+                for="other_skill"
+              >
+                اكتب المجال الآخر
+
+                <small dir="ltr">
+                  | Specify Other Skill
+                </small>
+
+                <span
+                  class="required-mark"
+                  aria-hidden="true"
+                >
+                  *
+                </span>
               </label>
-              <input class="form-control" id="other_skill" name="other_skill" type="text"
-                maxlength="120" placeholder="مثال: NLP, Robotics, MLOps">
-              <p class="form-error" id="other_skill-error" role="alert"></p>
+
+
+              <input
+                class="form-control"
+                id="other_skill"
+                name="other_skill"
+                type="text"
+                maxlength="120"
+                placeholder="مثال: NLP, Robotics, MLOps"
+              >
+
+
+              <p
+                class="form-error"
+                id="other_skill-error"
+                role="alert"
+              ></p>
+
             </div>
 
+
+
             <div class="form-field">
-              <label class="form-label" for="professional_link">
+
+              <label
+                class="form-label"
+                for="professional_link"
+              >
                 رابط Portfolio أو GitHub أو LinkedIn
-                <small dir="ltr">| Professional Link</small>
-                <span class="required-mark" aria-hidden="true">*</span>
+
+                <small dir="ltr">
+                  | Professional Link
+                </small>
+
+                <span
+                  class="required-mark"
+                  aria-hidden="true"
+                >
+                  *
+                </span>
               </label>
-              <input class="form-control" id="professional_link" name="professional_link"
-                type="url" inputmode="url" maxlength="500" required dir="ltr"
-                placeholder="https://github.com/username">
-              <p class="form-help">ضع رابطاً مهنياً واحداً على الأقل يمكن من خلاله الاطلاع على أعمالك أو ملفك.</p>
-              <p class="form-error" id="professional_link-error" role="alert"></p>
+
+
+              <input
+                class="form-control"
+                id="professional_link"
+                name="professional_link"
+                type="url"
+                inputmode="url"
+                maxlength="500"
+                required
+                dir="ltr"
+                placeholder="https://github.com/username"
+              >
+
+
+              <p class="form-help">
+                ضع رابطاً مهنياً واحداً على الأقل يمكن من خلاله
+                الاطلاع على أعمالك أو ملفك.
+              </p>
+
+
+              <p
+                class="form-error"
+                id="professional_link-error"
+                role="alert"
+              ></p>
+
             </div>
+
+
 
             <div class="form-field">
-              <label class="form-label" for="best_project_summary">
+
+              <label
+                class="form-label"
+                for="best_project_summary"
+              >
                 نبذة عن أفضل مشروع قمت بتنفيذه
-                <small dir="ltr">| Summary of Best AI Project</small>
-                <span class="required-mark" aria-hidden="true">*</span>
+
+                <small dir="ltr">
+                  | Summary of Best AI Project
+                </small>
+
+                <span
+                  class="required-mark"
+                  aria-hidden="true"
+                >
+                  *
+                </span>
               </label>
-              <textarea class="form-control" id="best_project_summary" name="best_project_summary"
-                maxlength="1500" required
-                placeholder="اذكر فكرة المشروع، التقنيات المستخدمة مثل PyTorch أو YOLO أو OpenAI API، وأبرز نتيجة حققتها."></textarea>
+
+
+              <textarea
+                class="form-control"
+                id="best_project_summary"
+                name="best_project_summary"
+                maxlength="1500"
+                required
+                placeholder="اذكر فكرة المشروع، التقنيات المستخدمة مثل PyTorch أو YOLO أو OpenAI API، وأبرز نتيجة حققتها."
+              ></textarea>
+
+
               <div class="form-meta-row">
-                <p class="form-help">يفضل ذكر الفكرة، الأدوات والتقنيات، والنتيجة.</p>
-                <span id="project-counter" dir="ltr">0 / 1500</span>
+
+                <p class="form-help">
+                  يفضل ذكر الفكرة، الأدوات والتقنيات، والنتيجة.
+                </p>
+
+                <span
+                  id="project-counter"
+                  dir="ltr"
+                >
+                  0 / 1500
+                </span>
+
               </div>
-              <p class="form-error" id="best_project_summary-error" role="alert"></p>
+
+
+              <p
+                class="form-error"
+                id="best_project_summary-error"
+                role="alert"
+              ></p>
+
             </div>
 
-            <div class="form-status form-status--info" id="configuration-status" role="status" aria-live="polite">
-              لم يتم ربط قاعدة البيانات بعد. أضيفي Supabase URL وAnon Key في ملف supabase-config.js بعد إعداد Supabase.
+
+
+            <div
+              class="form-status form-status--info"
+              id="configuration-status"
+              role="status"
+              aria-live="polite"
+            >
+              لم يتم ربط قاعدة البيانات بعد.
+              أضيفي Supabase URL وAnon Key في ملف
+              supabase-config.js بعد إعداد Supabase.
             </div>
 
-            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
 
-            <button class="button button--primary registration-submit" id="submit-button" type="submit">
-              <span class="submit-label">إرسال التسجيل</span>
-              <span class="submit-loading" hidden>جارٍ الإرسال...</span>
+
+            <div
+              class="form-status"
+              id="form-status"
+              role="status"
+              aria-live="polite"
+            ></div>
+
+
+
+            <button
+              class="button button--primary registration-submit"
+              id="submit-button"
+              type="submit"
+            >
+
+              <span class="submit-label">
+                إرسال التسجيل
+              </span>
+
+              <span
+                class="submit-loading"
+                hidden
+              >
+                جارٍ الإرسال...
+              </span>
+
             </button>
 
+
+
             <p class="registration-privacy">
-              تُستخدم هذه البيانات لأغراض مجتمع Talent4LY والتواصل المهني المرتبط به.
+              تُستخدم هذه البيانات لأغراض مجتمع FL4AI
+              والتواصل المهني المرتبط به.
             </p>
+
           </form>
+
         </section>
+
       </div>
 
+
+
       <div class="container registration-footer">
-        <p dir="ltr">© <span id="current-year">2026</span> Talent4LY — Libya AI Freelancers Community</p>
+
+        <p dir="ltr">
+          © <span id="current-year">2026</span>
+          FL4AI — AI TALENT. ON DEMAND.
+        </p>
+
       </div>
+
     </main>
+
   </body>
 </html>
