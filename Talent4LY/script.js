@@ -2,7 +2,7 @@
 
 // ضعي رابط نموذج التسجيل بين علامتي الاقتباس. تستخدمه جميع أزرار الانضمام.
 const SITE_CONFIG = Object.freeze({
-  registrationUrl: "",
+  registrationUrl: "./register.html",
 });
 
 function initializeNavigation() {
